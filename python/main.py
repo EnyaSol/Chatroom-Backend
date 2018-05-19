@@ -32,4 +32,4 @@ def index():
     return render_template('test.html')
 
 if __name__ == '__main__':
-    socketio.run(app=app, port=5000)
+    socketio.run(app=app, port=33507)
