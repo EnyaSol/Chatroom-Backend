@@ -13,8 +13,7 @@ list_of_cors_acceptable_sites = ["http://localhost:3000",
                                              "https://my-chatroom-backend-es.herokuapp.com/"]
 
 # Wraps application with socketio functionality
-socketio = SocketIO(app)
-socketio.server_options()
+socketio = SocketIO(app, cors_allowed_origins = list_of_cors_acceptable_sites)
 
 @socketio.on('message')
 def handleMessage(msg):
