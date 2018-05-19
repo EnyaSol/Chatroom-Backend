@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+certifi = "==2018.4.16"
+click = "==6.7"
+freeze = "==1.0.10"
+itsdangerous = "==0.24"
+pipenv = "==2018.5.18"
+python-engineio = "==2.1.1"
+python-socketio = "==1.9.0"
+six = "==1.11.0"
+virtualenv = "==16.0.0"
+virtualenv-clone = "==0.3.0"
+Flask = "==0.12.2"
+Flask-SocketIO = "==3.0.0"
+"Jinja2" = "==2.9.6"
+MarkupSafe = "==1.0"
+Werkzeug = "==0.12.2"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
