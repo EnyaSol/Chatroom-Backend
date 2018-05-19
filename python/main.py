@@ -21,10 +21,15 @@ def handleMessage(msg):
     # Send a message to all clients connected to the server
     send(msg, broadcast=True)
 
+@socketio.on('send_message')
+def handle_source(json_data):
+    text = json_data['message']
+    socketio.emit('echo', {'echo': 'Server Says: ' + text})
+
 
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('test.html')
 
 if __name__ == '__main__':
     socketio.run(app=app, port=5000)
